@@ -1,0 +1,89 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+#status {
+    background-color: grey;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    border: 2px solid green;
+}
+
+#users {
+    background-color: light-grey;
+    padding: 15px;
+    border-right: 2px solid #dee2e6;
+    font-size: 18px;
+    color: #495057;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    background-color: #ffffff;
+}
+
+#editor {
+    width: 100%;
+    max-width: 90%;
+    height: 900px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    padding: 15px;
+    font-size: 18px;
+    line-height: 1.6;
+    outline: none;
+    resize: none;
+    background-color: #f8f9fa;
+    color: #212529;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#cursor-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Zabránění interakci s kurzory */
+}
+
+/* Kurzory */
+.cursor {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background-color: #17a2b8;
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+}
+
+
+.selection-highlight {
+    position: absolute;
+    background-color: rgba(40, 167, 69, 0.3);
+    z-index: 2;
+    pointer-events: none;
+    border-radius: 3px;
+}
+
+.highlight {
+    background-color: rgba(255, 193, 7, 0.5);
+    pointer-events: none;
+    z-index: 1;
+}
